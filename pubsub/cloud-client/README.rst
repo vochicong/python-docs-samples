@@ -8,7 +8,7 @@ This directory contains samples for Google Cloud Pub/Sub. `Google Cloud Pub/Sub`
 
 
 
-.. _Google Cloud Pub/Sub: https://cloud.google.com/pubsub/docs 
+.. _Google Cloud Pub/Sub: https://cloud.google.com/pubsub/docs
 
 Setup
 -------------------------------------------------------------------------------
@@ -64,11 +64,29 @@ Install Dependencies
 
         $ pip install -r requirements.txt
 
+#. Install the dependencies needed to run the tests.
+
+    .. code-block:: bash
+
+        $ pip install -r requirements_test.txt
+
 .. _pip: https://pip.pypa.io/
 .. _virtualenv: https://virtualenv.pypa.io/
 
 Samples
 -------------------------------------------------------------------------------
+
+Tests
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+To run the tests:
+
+.. code-block:: bash
+
+    $ pytest
+
 
 Quickstart
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -94,13 +112,13 @@ To run this sample:
     $ python publisher.py
 
     usage: publisher.py [-h] {list,create,delete,publish} ...
-    
+
     This application demonstrates how to perform basic operations on topics
     with the Cloud Pub/Sub API.
-    
+
     For more information, see the README.md under /pubsub and the documentation
     at https://cloud.google.com/pubsub/docs.
-    
+
     positional arguments:
       {list,create,delete,publish}
         list                Lists all Pub/Sub topics in the current project.
@@ -108,7 +126,7 @@ To run this sample:
         delete              Deletes an existing Pub/Sub topic.
         publish             Publishes a message to a Pub/Sub topic with the given
                             data.
-    
+
     optional arguments:
       -h, --help            show this help message and exit
 
@@ -125,20 +143,20 @@ To run this sample:
     $ python subscriber.py
 
     usage: subscriber.py [-h] {list,create,delete,receive} ...
-    
+
     This application demonstrates how to perform basic operations on
     subscriptions with the Cloud Pub/Sub API.
-    
+
     For more information, see the README.md under /pubsub and the documentation
     at https://cloud.google.com/pubsub/docs.
-    
+
     positional arguments:
       {list,create,delete,receive}
         list                Lists all subscriptions for a given topic.
         create              Create a new pull subscription on the given topic.
         delete              Deletes an existing Pub/Sub topic.
         receive             Receives a message from a pull subscription.
-    
+
     optional arguments:
       -h, --help            show this help message and exit
 
@@ -157,13 +175,13 @@ To run this sample:
     usage: iam.py [-h]
                   {get-topic-policy,get-subscription-policy,set-topic-policy,set-subscription-policy,check-topic-permissions,check-subscription-permissions}
                   ...
-    
+
     This application demonstrates how to perform basic operations on IAM
     policies with the Cloud Pub/Sub API.
-    
+
     For more information, see the README.md under /pubsub and the documentation
     at https://cloud.google.com/pubsub/docs.
-    
+
     positional arguments:
       {get-topic-policy,get-subscription-policy,set-topic-policy,set-subscription-policy,check-topic-permissions,check-subscription-permissions}
         get-topic-policy    Prints the IAM policy for the given topic.
@@ -178,7 +196,7 @@ To run this sample:
         check-subscription-permissions
                             Checks to which permissions are available on the given
                             subscription.
-    
+
     optional arguments:
       -h, --help            show this help message and exit
 
